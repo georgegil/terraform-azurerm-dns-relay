@@ -1,0 +1,29 @@
+name: Terraform CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  format:
+    name: Check terraform formatting
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 1.1.15
+
+    - name: Run terraform fmt
+      id: fmt
+      run: terraform fmt -diff -recursive
+
+    - name: Add & Commit
+      uses: EndBug/add-and-commit@v5.1.0
+      with:
+        add: '.'
+        author_name: github-actions
+        author_email: 41898282+github-actions[bot]@users.noreply.github.com
+        message: 'Ran terraform fmt'
