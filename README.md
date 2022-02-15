@@ -1,5 +1,7 @@
 # terraform-azurerm-dns-relay
 
+## DNS Relay for Azure Private Link DNS 
+
 ```hcl
 module "uksouth_dns" {
   source = "./vmss-module"
