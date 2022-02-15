@@ -61,7 +61,7 @@ variable "dns_servers" {
 
 variable "syslog_server" {
   type        = string
-  description = "Qradar syslog server"
+  description = "syslog servers"
 }
 
 variable "vnet_cidr" {
