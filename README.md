@@ -4,11 +4,7 @@
 
 ```hcl
 module "uksouth_dns" {
-  source = "./vmss-module"
-
-  providers = {
-    azurerm = azurerm.transit
-  }
+  source = "https://github.com/georgegil/terraform-azurerm-dns-relay?ref=latest"
 
   vm_prefix      = "gbazddns"
   rg_name        = azurerm_resource_group.rg-dns-svc.name
@@ -23,12 +19,11 @@ module "uksouth_dns" {
   egress         = false
 
   os = {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "18.04-LTS"
+    publisher = "canonical"
+    offer     = "0001-com-ubuntu-server-focal"
+    sku       = "20_04-lts-gen2"
     version   = "latest"
   }
 
 }
-
 ```
