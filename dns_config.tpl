@@ -68,7 +68,7 @@ logging {
       };
 EOF
 
-# Creates TFE frontend settings file
+# Creates frontend settings file
 cat > /etc/bind/named.conf.local <<EOF
 zone "gglabs.co.uk" {
       type forward;
