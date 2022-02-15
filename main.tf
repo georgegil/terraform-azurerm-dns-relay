@@ -145,9 +145,8 @@ resource "azurerm_linux_virtual_machine_scale_set" "vm" {
   }
 
   network_interface {
-    name    = "nic"
-    primary = true
-    #dns_servers               = ["168.63.129.16"]
+    name                      = "nic"
+    primary                   = true
     network_security_group_id = azurerm_network_security_group.nsg.id
 
     ip_configuration {

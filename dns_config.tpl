@@ -30,7 +30,7 @@ options {
         forwarders {
           168.63.129.16;
         };
-        dnssec-validation no;        
+        dnssec-validation no;
       };
 logging {
         channel named           { file "/var/log/named/named.log"        versions 10 size 20M; severity info;  print-time yes; print-category yes; print-severity yes; };
@@ -73,17 +73,17 @@ cat > /etc/bind/named.conf.local <<EOF
 zone "gglabs.co.uk" {
       type forward;
       forward only;
-      forwarders { 
+      forwarders {
         ${dns1};
-        ${dns2}; 
+        ${dns2};
         };
       };
       zone "10.in-addr.arpa" {
       type forward;
       forward only;
-      forwarders { 
+      forwarders {
         ${dns1};
-        ${dns2}; 
+        ${dns2};
         };
       };
       zone "${reverse_dns_cidr}.in-addr.arpa" {
