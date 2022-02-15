@@ -27,3 +27,7 @@ module "uksouth_dns" {
 
 }
 ```
+
+## Development
+
+Feel free to create a branch and submit a pull request to make changes to the module.
