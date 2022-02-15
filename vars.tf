@@ -26,7 +26,7 @@ variable "instance_count" {
 }
 variable "admin_username" {
   type        = string
-  default     = "cbreadmin"
+  default     = "adminperson"
   description = "The usename to which the public key is being bound to"
 }
 
