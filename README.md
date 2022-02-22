@@ -1,6 +1,6 @@
-# terraform-azurerm-dns-relay
+# Terraform DNS Relay module
 
-## DNS Relay for Azure Private Link DNS 
+## DNS Relay for Azure Private Link DNS from on-prem DNS servers
 
 ```hcl
 module "uksouth_dns" {
@@ -15,8 +15,8 @@ module "uksouth_dns" {
   subnet_id      = module.uksouth-transit.platforms_subnet.id
   dns_servers    = ["10.8.8.19", "10.11.8.20"]
   syslog_server  = "10.8.27.136"
-  vnet_cidr      = module.uksouth-transit.vnet.address_space[0]
-  egress         = false
+  vnet_cidr      = "10.20.0.0/16"
+  egress         = true
 
   os = {
     publisher = "canonical"
