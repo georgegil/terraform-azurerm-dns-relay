@@ -111,7 +111,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "vm" {
     reverse_dns_cidr = local.reverse_dns_cidr,
     lb_ip            = split(".", azurerm_lb.lb.private_ip_address)[3],
     vm_prefix        = var.vm_prefix,
-    syslog_server = var.syslog_server }
+    syslog_server    = var.syslog_server }
   ))
   zones = var.location != "East Asia" && var.location != "Australia Southeast" ? [1, 2, 3] : null
 
