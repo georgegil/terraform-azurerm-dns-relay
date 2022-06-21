@@ -1,3 +1,6 @@
+## this has now been replaced by Azure DNS Resolver https://docs.microsoft.com/en-us/azure/dns/dns-private-resolver-overview
+
+
 # Terraform DNS Relay module
 
 ## DNS Relay for Azure Private Link DNS from on-prem DNS servers
