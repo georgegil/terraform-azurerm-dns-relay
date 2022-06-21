@@ -1,4 +1,4 @@
-## this has now been replaced by Azure DNS Resolver https://docs.microsoft.com/en-us/azure/dns/dns-private-resolver-overview
+## This repo is no longer being maintaind as it has now been replaced by Azure DNS Resolver https://docs.microsoft.com/en-us/azure/dns/dns-private-resolver-overview
 
 
 # Terraform DNS Relay module
